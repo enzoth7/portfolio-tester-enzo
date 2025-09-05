@@ -22,8 +22,11 @@ Se probó el sitio web en escenarios de compra, filtros, precios, formularios y 
 **Capturas.**  
 ![Checkout vacío](screenshots/checkout_empty.png)  
 ![Formulario inválido](screenshots/data_form_1.png)  
+![Formulario inválido](screenshots/data_form_2.png)  
 ![Filtros](screenshots/filter_1.png)  
+![Filtros](screenshots/filter_2.png)  
 ![Precios diferentes](screenshots/product_price_1.png)
+![Precios diferentes](screenshots/product_price_2.png)
 
 **Archivos.**  
 - `test-cases.xlsx` (casos de prueba documentados)  
@@ -31,3 +34,4 @@ Se probó el sitio web en escenarios de compra, filtros, precios, formularios y 
 
 **Autor.**  
 Enzo Thome — Software Tester Jr.
+
