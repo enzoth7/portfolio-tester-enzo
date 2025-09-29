@@ -1,4 +1,4 @@
-## \[DummyJSON] Precio como string (simulado para portfolio)
+## [DummyJSON] Precio como string (simulado para portfolio)
 
 **Severidad:** Media  
 
@@ -19,6 +19,7 @@
 **Evidencias:** `evidencias/respuesta\_ejemplo.txt`  
 
 **Notas:** Caso creado a efectos demostrativos para el portfolio; en sistemas reales se reporta como inconsistencia de tipo de dato.
+
 
 
 
