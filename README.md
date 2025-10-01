@@ -8,7 +8,14 @@ I'm based in Uruguay and open to **remote opportunities**.
 
 ## 🧪 Projects
 
-*(Coming soon... practical projects will be added as I progress in my training this year.)*
+- 01-saucedemo-testing
+Manual testing en Saucedemo: validación de login, carrito, checkout y filtros de productos.
+- 02-demoblaze-testing
+Pruebas funcionales en Demoblaze: compra de productos, manejo de carrito y validación de precios.
+- 03-copay-bug
+Bug report sobre Copay wallet app, documentando pasos, evidencias y propuesta de mejora.
+- 04-API-QA-Sandbox-Postman
+Testing de APIs con Postman: validación de status, estructura y campos usando DummyJSON, Postman Echo y JSONPlaceholder.
 
 ---
 
