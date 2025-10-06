@@ -45,10 +45,19 @@ Explorar y probar endpoints reales de la web **Tienda Inglesa** utilizando **Pos
 
 ---
 
+## Capturas  
+![Postman](evidencias/Postman_interceptor.png)
+![Debug session](evidencias/Interceptor_debug_session.png)
+![Endpoints](evidencias/Endpoints.png)
+![Test scripts](evidencias/Test_scripts.png)  
+
+---
+
 ## ✏️ Conclusión
 Se identificaron y validaron correctamente endpoints reales del sitio **Tienda Inglesa**.  
 El proyecto demuestra el uso de **Postman Interceptor** para capturar APIs sin documentación y la ejecución de **tests automatizados** para validar respuesta, formato y performance.
 
 ---
+
 
 
