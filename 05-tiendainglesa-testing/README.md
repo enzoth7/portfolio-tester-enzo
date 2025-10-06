@@ -8,7 +8,6 @@ Explorar y probar endpoints reales de la web **Tienda Inglesa** utilizando **Pos
 ## 🧰 Herramientas
 - Postman (App de escritorio)  
 - Postman Interceptor (Extensión Chrome)  
-- Chrome DevTools  
 
 ---
 
@@ -28,16 +27,21 @@ Explorar y probar endpoints reales de la web **Tienda Inglesa** utilizando **Pos
 ---
 
 ## 📂 Estructura del proyecto
-/postman/
-├─ 05-Tienda-Inglesa.postman_collection.json
-/casos/
-│─ testcases.xlsx
-/evidencias/
-├─ Endpoints.png
-├─ Interceptor debug session.png
-├─ Test scripts.png
-└─ Postman interceptor.png
-/README.md
+```
+├── /postman/
+│   └── 05-Tienda-Inglesa.postman_collection.json
+│
+├── /casos/
+│   └── testcases.xlsx
+│
+├── /evidencias/
+│   ├── Endpoints.png
+│   ├── Interceptor debug session.png
+│   ├── Test scripts.png
+│   └── Postman interceptor.png
+│
+└── README.md
+```
 
 ---
 
@@ -46,4 +50,5 @@ Se identificaron y validaron correctamente endpoints reales del sitio **Tienda I
 El proyecto demuestra el uso de **Postman Interceptor** para capturar APIs sin documentación y la ejecución de **tests automatizados** para validar respuesta, formato y performance.
 
 ---
+
 
