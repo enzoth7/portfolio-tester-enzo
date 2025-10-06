@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "145c1172-df36-4880-998d-bd26fe4ff0db",
+		"name": "05-Tienda-Inglesa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47829955",
+		"_collection_link": "https://enzo-thome.postman.co/workspace/Enzo-Thome's-Workspace~c8764296-19fc-429f-876a-ff9535bc7046/collection/47829955-145c1172-df36-4880-998d-bd26fe4ff0db?action=share&source=collection_link&creator=47829955"
+	},
+	"item": [
+		{
+			"name": "https://www.tiendainglesa.com.uy/supermercado/categoria/congelados/frutas-verduras-congeladas/busqueda?gxfullajaxEvt,0,0,*%3A*,181,184,0,statprice+asc,,false,,,,0,gx-no-cache=1759754290486",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "host",
+						"value": "www.tiendainglesa.com.uy"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GxAjaxRequest",
+						"value": "1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "X-GXAUTH-TOKEN",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC1leHAiOiIxNzYxMDUwMjg5Nzg5IiwiZ3gtcGdtIjoiV01BU1RFUiJ9.CFYd4yetF379AldvUbpmtj4AoosbyRs5Vz0s6YoRtNs"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"MPage\":true,\"cmpCtx\":\"\",\"parms\":[1,{\"ChannelId\":1,\"CustomerId\":0},{},{\"StoreId\":0,\"SelectedLabel\":\"\",\"SelectedIcon_BannerId\":0,\"Popup_BannerId\":0,\"Title\":\"\"},\"wSearch\",{\"CustomerMail\":\"\",\"CustomerId\":0,\"StoreId\":0,\"EventId\":0,\"EventDesc\":\"\",\"EventType\":\"\",\"PageName\":\"\",\"HasFBDataFlag\":false,\"SessionId\":\"\"},{\"LogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_a27f2365-4a23-418d-8c23-80b1ecff1884.png\",\"LogoGrayUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_2004e672-ae18-4030-bb6d-9026f71d77e8.png\",\"CartLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_891867af-b45f-4080-a9cd-4debc0d9de13.png\",\"AndroidThemeName\":\"TiendaAndroid\",\"iOSThemeName\":\"TiendaiOS7\",\"WebThemeName\":\"TiendaInglesaWeb\",\"AddressesDeliveryTitle\":\"Envío a Domicilio\",\"AddressesPickupTitle\":\"Retiro\",\"BlockCreateAddressFlag\":false,\"AllowDeliveryFlag\":true,\"AllowPickupFlag\":true,\"AllowAgencyFlag\":true,\"MailingAddress\":\"\",\"EnableShoppingListFlag\":true,\"DefaultToPickupFlag\":true,\"Notify_Middlware\":\"PRO\",\"mw_ChannelName\":\"Supermercado\",\"mw_ChannelPrefix\":\"EC\",\"mw_CanCodigoCanal\":3,\"iLeap_UpdatePayment\":true,\"IsExternalFlag\":false,\"ExternalUrl\":\"\",\"CheckoutDeliveryTitle\":\"\",\"CheckoutPickupTitle\":\"\",\"ChannelSelectorLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner9784_c3c87ffe-eddc-4b3d-8da4-ae4436c5e365.png?20240801170641\",\"SocialMedia\":[{\"SocialMediaShareOn\":\"Facebook\",\"SocialMediaName\":\"FACEBOOK\",\"SocialMediaIcon\":\"/static/Resources/facebook.png\",\"SocialMediaLink\":\"http://www.facebook.com/tiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":true},{\"SocialMediaShareOn\":\"Twitter\",\"SocialMediaName\":\"TWITTER\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner7059_683ca2ac-b1c6-427e-8880-1140107a7054.png\",\"SocialMediaLink\":\"http://twitter.com/TiendaInglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":true},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"YOUTUBE\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6874_16edeb4a-4a2e-4095-9413-b0f5de2987e7.png\",\"SocialMediaLink\":\"https://youtube.com/@canaltiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"NEWSLETTER\",\"SocialMediaIcon\":\"\",\"SocialMediaLink\":\"Tienda Inglesa\",\"SocialMediaActiveOnFooter\":false,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"Instagram\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6873_aa5558d0-1e63-4ae3-b868-eba8a5ddf196.png\",\"SocialMediaLink\":\"https://instagram.com/tiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"Threads\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner7106_8b5eff3f-6096-4680-aa70-bef526798f30.png\",\"SocialMediaLink\":\"https://www.threads.net/@tiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"WhatsApp\",\"SocialMediaName\":\"WhatsApp\",\"SocialMediaIcon\":\"/static/Resources/Whatsapp.png\",\"SocialMediaLink\":\"http://#\",\"SocialMediaActiveOnFooter\":false,\"SocialMediaActiveOnProduct\":true}],\"SiteComponents\":{\"ShowFooterTopFlag\":true,\"ShowFooterStoreFlag\":true,\"ShowCartRightFlag\":false,\"ShowContactStoreFlag\":true,\"ShowCartTotalFlag\":true,\"ShowStoreAndAddressFlag\":true,\"ShowSubscribeToNewsFlag\":true,\"SearchInviteMessage\":\"Buscar en Tienda Inglesa\",\"ShowMessageToPicker\":true,\"ShowCartReplacements\":true,\"ShowBackToSchool\":true},\"Fidelity\":{\"ShowPointsAsMainPriceFlag\":false,\"ShowSecondaryPriceFlag\":false,\"ShowStickersFlag\":true,\"ShowPointsPriceFlag\":true,\"ShowFidelityPopUp\":true},\"CheckOut\":{\"RequiredPointsPercentage\":0,\"EditPointAmountEnabledFlag\":true,\"DateSelectorNotEnabledFlag\":false,\"OrderAdditionsType\":3,\"AllowASAPDelivery\":false,\"QuickCheckoutEnabledFlag\":false,\"MaxCartProducts\":0},\"Copyright\":{\"Owner\":\"Henderson & Cía. S.A. RUT 210094030014\",\"Description\":\"Todos los derechos reservados. La información de productos y precios es propiedad de Henderson & Cía. S.A., y es provista para uso estrictamente personal. Prohibido recolectar, reproducir y comercializar.\"},\"Products\":{\"ShowSelectorInitAmount\":false,\"ShowProductCode\":true,\"ProductCodeInfo\":\"Código interno, recuerde el mismo si desea hacer una consulta personalmente o al 0800 3030\"},\"Integration\":{\"Promotions\":{\"ExternalEngineMode\":\"OFF\"}},\"RangeFilters\":{\"RangeUnit\":\"\",\"Ranges\":[]},\"Logos\":{\"vectorLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_7f796fb7-555c-4431-b8d2-9b59bb063872.png\",\"vectorIsotypeUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_bfe23c4b-1ad2-48ad-b461-b4d7edded819.png\",\"largePngLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_e6a3b687-5bc0-491c-93a5-b7e99b8c62d2.png\",\"SmallPngLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_6e07e464-444f-4f9b-a4ca-e8cb5c15522d.png\"}}],\"hsh\":[{\"hsh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC12YWwiOiIxIiwiZ3gtZXhwIjoiMTc2MTA1MDI4OTc4OSIsImd4LXBnbSI6Imd4bXBhZ2VfV01BU1RFUiJ9.80TF7CZqOwe1AS54m0-Kb9HAxWsAgNVqpmMdXuT4yUs\",\"row\":\"\"},{\"hsh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC12YWwiOiJ3U2VhcmNoIiwiZ3gtZXhwIjoiMTc2MTA1MDI4OTc4OSIsImd4LXBnbSI6Imd4bXBhZ2VfV01BU1RFUiJ9.3o8Y2Lu-MYMVKWtPPjQYwWsljfzmks0oIjE98bmmDxg\",\"row\":\"\"},{\"hsh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC12YWwiOiJ7XCJMb2dvVXJsXCI6XCJodHRwczovL3Byb2QtcmVzaXplLnRpZW5kYWluZ2xlc2EuY29tLnV5L2ltYWdlcy9iYW5uZXJzL0Jhbm5lcjY4OTVfYTI3ZjIzNjUtNGEyMy00MThkLThjMjMtODBiMWVjZmYxODg0LnBuZ1wiLFwiTG9nb0dyYXlVcmxcIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyNjg5NV8yMDA0ZTY3Mi1hZTE4LTQwMzAtYmI2ZC05MDI2ZjcxZDc3ZTgucG5nXCIsXCJDYXJ0TG9nb1VybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1Xzg5MTg2N2FmLWI0NWYtNDA4MC1hOWNkLTRkZWJjMGQ5ZGUxMy5wbmdcIixcIkFuZHJvaWRUaGVtZU5hbWVcIjpcIlRpZW5kYUFuZHJvaWRcIixcImlPU1RoZW1lTmFtZVwiOlwiVGllbmRhaU9TN1wiLFwiV2ViVGhlbWVOYW1lXCI6XCJUaWVuZGFJbmdsZXNhV2ViXCIsXCJBZGRyZXNzZXNEZWxpdmVyeVRpdGxlXCI6XCJFbnbDrW8gYSBEb21pY2lsaW9cIixcIkFkZHJlc3Nlc1BpY2t1cFRpdGxlXCI6XCJSZXRpcm9cIixcIkJsb2NrQ3JlYXRlQWRkcmVzc0ZsYWdcIjpmYWxzZSxcIkFsbG93RGVsaXZlcnlGbGFnXCI6dHJ1ZSxcIkFsbG93UGlja3VwRmxhZ1wiOnRydWUsXCJBbGxvd0FnZW5jeUZsYWdcIjp0cnVlLFwiTWFpbGluZ0FkZHJlc3NcIjpcIlwiLFwiRW5hYmxlU2hvcHBpbmdMaXN0RmxhZ1wiOnRydWUsXCJEZWZhdWx0VG9QaWNrdXBGbGFnXCI6dHJ1ZSxcIk5vdGlmeV9NaWRkbHdhcmVcIjpcIlBST1wiLFwibXdfQ2hhbm5lbE5hbWVcIjpcIlN1cGVybWVyY2Fkb1wiLFwibXdfQ2hhbm5lbFByZWZpeFwiOlwiRUNcIixcIm13X0NhbkNvZGlnb0NhbmFsXCI6MyxcImlMZWFwX1VwZGF0ZVBheW1lbnRcIjp0cnVlLFwiSXNFeHRlcm5hbEZsYWdcIjpmYWxzZSxcIkV4dGVybmFsVXJsXCI6XCJcIixcIkNoZWNrb3V0RGVsaXZlcnlUaXRsZVwiOlwiXCIsXCJDaGVja291dFBpY2t1cFRpdGxlXCI6XCJcIixcIkNoYW5uZWxTZWxlY3RvckxvZ29VcmxcIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyOTc4NF9jM2M4N2ZmZS1lZGRjLTRiM2QtOGRhNC1hZTQ0MzZjNWUzNjUucG5nPzIwMjQwODAxMTcwNjQxXCIsXCJTb2NpYWxNZWRpYVwiOlt7XCJTb2NpYWxNZWRpYVNoYXJlT25cIjpcIkZhY2Vib29rXCIsXCJTb2NpYWxNZWRpYU5hbWVcIjpcIkZBQ0VCT09LXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcIi9zdGF0aWMvUmVzb3VyY2VzL2ZhY2Vib29rLnBuZ1wiLFwiU29jaWFsTWVkaWFMaW5rXCI6XCJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS90aWVuZGFpbmdsZXNhXCIsXCJTb2NpYWxNZWRpYUFjdGl2ZU9uRm9vdGVyXCI6dHJ1ZSxcIlNvY2lhbE1lZGlhQWN0aXZlT25Qcm9kdWN0XCI6dHJ1ZX0se1wiU29jaWFsTWVkaWFTaGFyZU9uXCI6XCJUd2l0dGVyXCIsXCJTb2NpYWxNZWRpYU5hbWVcIjpcIlRXSVRURVJcIixcIlNvY2lhbE1lZGlhSWNvblwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI3MDU5XzY4M2NhMmFjLWIxYzYtNDI3ZS04ODgwLTExNDAxMDdhNzA1NC5wbmdcIixcIlNvY2lhbE1lZGlhTGlua1wiOlwiaHR0cDovL3R3aXR0ZXIuY29tL1RpZW5kYUluZ2xlc2FcIixcIlNvY2lhbE1lZGlhQWN0aXZlT25Gb290ZXJcIjp0cnVlLFwiU29jaWFsTWVkaWFBY3RpdmVPblByb2R1Y3RcIjp0cnVlfSx7XCJTb2NpYWxNZWRpYVNoYXJlT25cIjpcIlwiLFwiU29jaWFsTWVkaWFOYW1lXCI6XCJZT1VUVUJFXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyNjg3NF8xNmVkZWI0YS00YTJlLTQwOTUtOTQxMy1iMGY1ZGUyOTg3ZTcucG5nXCIsXCJTb2NpYWxNZWRpYUxpbmtcIjpcImh0dHBzOi8veW91dHViZS5jb20vQGNhbmFsdGllbmRhaW5nbGVzYVwiLFwiU29jaWFsTWVkaWFBY3RpdmVPbkZvb3RlclwiOnRydWUsXCJTb2NpYWxNZWRpYUFjdGl2ZU9uUHJvZHVjdFwiOmZhbHNlfSx7XCJTb2NpYWxNZWRpYVNoYXJlT25cIjpcIlwiLFwiU29jaWFsTWVkaWFOYW1lXCI6XCJORVdTTEVUVEVSXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcIlwiLFwiU29jaWFsTWVkaWFMaW5rXCI6XCJUaWVuZGEgSW5nbGVzYVwiLFwiU29jaWFsTWVkaWFBY3RpdmVPbkZvb3RlclwiOmZhbHNlLFwiU29jaWFsTWVkaWFBY3RpdmVPblByb2R1Y3RcIjpmYWxzZX0se1wiU29jaWFsTWVkaWFTaGFyZU9uXCI6XCJcIixcIlNvY2lhbE1lZGlhTmFtZVwiOlwiSW5zdGFncmFtXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyNjg3M19hYTU1NThkMC0xZTYzLTRhZTMtYjg2OC1lYmE4YTVkZGYxOTYucG5nXCIsXCJTb2NpYWxNZWRpYUxpbmtcIjpcImh0dHBzOi8vaW5zdGFncmFtLmNvbS90aWVuZGFpbmdsZXNhXCIsXCJTb2NpYWxNZWRpYUFjdGl2ZU9uRm9vdGVyXCI6dHJ1ZSxcIlNvY2lhbE1lZGlhQWN0aXZlT25Qcm9kdWN0XCI6ZmFsc2V9LHtcIlNvY2lhbE1lZGlhU2hhcmVPblwiOlwiXCIsXCJTb2NpYWxNZWRpYU5hbWVcIjpcIlRocmVhZHNcIixcIlNvY2lhbE1lZGlhSWNvblwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI3MTA2XzhiNWVmZjNmLTYwOTYtNDY4MC1hYTcwLWJlZjUyNjc5OGYzMC5wbmdcIixcIlNvY2lhbE1lZGlhTGlua1wiOlwiaHR0cHM6Ly93d3cudGhyZWFkcy5uZXQvQHRpZW5kYWluZ2xlc2FcIixcIlNvY2lhbE1lZGlhQWN0aXZlT25Gb290ZXJcIjp0cnVlLFwiU29jaWFsTWVkaWFBY3RpdmVPblByb2R1Y3RcIjpmYWxzZX0se1wiU29jaWFsTWVkaWFTaGFyZU9uXCI6XCJXaGF0c0FwcFwiLFwiU29jaWFsTWVkaWFOYW1lXCI6XCJXaGF0c0FwcFwiLFwiU29jaWFsTWVkaWFJY29uXCI6XCIvc3RhdGljL1Jlc291cmNlcy9XaGF0c2FwcC5wbmdcIixcIlNvY2lhbE1lZGlhTGlua1wiOlwiaHR0cDovLyNcIixcIlNvY2lhbE1lZGlhQWN0aXZlT25Gb290ZXJcIjpmYWxzZSxcIlNvY2lhbE1lZGlhQWN0aXZlT25Qcm9kdWN0XCI6dHJ1ZX1dLFwiU2l0ZUNvbXBvbmVudHNcIjp7XCJTaG93Rm9vdGVyVG9wRmxhZ1wiOnRydWUsXCJTaG93Rm9vdGVyU3RvcmVGbGFnXCI6dHJ1ZSxcIlNob3dDYXJ0UmlnaHRGbGFnXCI6ZmFsc2UsXCJTaG93Q29udGFjdFN0b3JlRmxhZ1wiOnRydWUsXCJTaG93Q2FydFRvdGFsRmxhZ1wiOnRydWUsXCJTaG93U3RvcmVBbmRBZGRyZXNzRmxhZ1wiOnRydWUsXCJTaG93U3Vic2NyaWJlVG9OZXdzRmxhZ1wiOnRydWUsXCJTZWFyY2hJbnZpdGVNZXNzYWdlXCI6XCJCdXNjYXIgZW4gVGllbmRhIEluZ2xlc2FcIixcIlNob3dNZXNzYWdlVG9QaWNrZXJcIjp0cnVlLFwiU2hvd0NhcnRSZXBsYWNlbWVudHNcIjp0cnVlLFwiU2hvd0JhY2tUb1NjaG9vbFwiOnRydWV9LFwiRmlkZWxpdHlcIjp7XCJTaG93UG9pbnRzQXNNYWluUHJpY2VGbGFnXCI6ZmFsc2UsXCJTaG93U2Vjb25kYXJ5UHJpY2VGbGFnXCI6ZmFsc2UsXCJTaG93U3RpY2tlcnNGbGFnXCI6dHJ1ZSxcIlNob3dQb2ludHNQcmljZUZsYWdcIjp0cnVlLFwiU2hvd0ZpZGVsaXR5UG9wVXBcIjp0cnVlfSxcIkNoZWNrT3V0XCI6e1wiUmVxdWlyZWRQb2ludHNQZXJjZW50YWdlXCI6MCxcIkVkaXRQb2ludEFtb3VudEVuYWJsZWRGbGFnXCI6dHJ1ZSxcIkRhdGVTZWxlY3Rvck5vdEVuYWJsZWRGbGFnXCI6ZmFsc2UsXCJPcmRlckFkZGl0aW9uc1R5cGVcIjozLFwiQWxsb3dBU0FQRGVsaXZlcnlcIjpmYWxzZSxcIlF1aWNrQ2hlY2tvdXRFbmFibGVkRmxhZ1wiOmZhbHNlLFwiTWF4Q2FydFByb2R1Y3RzXCI6MH0sXCJDb3B5cmlnaHRcIjp7XCJPd25lclwiOlwiSGVuZGVyc29uICYgQ8OtYS4gUy5BLiBSVVQgMjEwMDk0MDMwMDE0XCIsXCJEZXNjcmlwdGlvblwiOlwiVG9kb3MgbG9zIGRlcmVjaG9zIHJlc2VydmFkb3MuIExhIGluZm9ybWFjacOzbiBkZSBwcm9kdWN0b3MgeSBwcmVjaW9zIGVzIHByb3BpZWRhZCBkZSBIZW5kZXJzb24gJiBDw61hLiBTLkEuLCB5IGVzIHByb3Zpc3RhIHBhcmEgdXNvIGVzdHJpY3RhbWVudGUgcGVyc29uYWwuIFByb2hpYmlkbyByZWNvbGVjdGFyLCByZXByb2R1Y2lyIHkgY29tZXJjaWFsaXphci5cIn0sXCJQcm9kdWN0c1wiOntcIlNob3dTZWxlY3RvckluaXRBbW91bnRcIjpmYWxzZSxcIlNob3dQcm9kdWN0Q29kZVwiOnRydWUsXCJQcm9kdWN0Q29kZUluZm9cIjpcIkPDs2RpZ28gaW50ZXJubywgcmVjdWVyZGUgZWwgbWlzbW8gc2kgZGVzZWEgaGFjZXIgdW5hIGNvbnN1bHRhIHBlcnNvbmFsbWVudGUgbyBhbCAwODAwIDMwMzBcIn0sXCJJbnRlZ3JhdGlvblwiOntcIlByb21vdGlvbnNcIjp7XCJFeHRlcm5hbEVuZ2luZU1vZGVcIjpcIk9GRlwifX0sXCJSYW5nZUZpbHRlcnNcIjp7XCJSYW5nZVVuaXRcIjpcIlwiLFwiUmFuZ2VzXCI6W119LFwiTG9nb3NcIjp7XCJ2ZWN0b3JMb2dvVXJsXCI6XCJodHRwczovL3Byb2QtcmVzaXplLnRpZW5kYWluZ2xlc2EuY29tLnV5L2ltYWdlcy9iYW5uZXJzL0Jhbm5lcjY4OTVfN2Y3OTZmYjctNTU1Yy00NDMxLWI4ZDItOWI1OWJiMDYzODcyLnBuZ1wiLFwidmVjdG9ySXNvdHlwZVVybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1X2JmZTIzYzRiLTFhZDItNDhhZC1iNDYxLWI0ZDdlZGRlZDgxOS5wbmdcIixcImxhcmdlUG5nTG9nb1VybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1X2U2YTNiNjg3LTViYzAtNDkxYy05M2E1LWI3ZTk5YjhjNjJkMi5wbmdcIixcIlNtYWxsUG5nTG9nb1VybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1XzZlMDdlNDY0LTQ0NGYtNGY5Yi1hNGNhLWU4Y2I1YzE1NTIyZC5wbmdcIn19IiwiZ3gtZXhwIjoiMTc2MTA1MDI4OTc4OSIsImd4LXBnbSI6Imd4bXBhZ2VfV01BU1RFUiJ9.txZCdagwwFuuk3f-EmbKKcT_3UjWl1THDHO_dZLe--E\",\"row\":\"\"}],\"objClass\":\"wmaster\",\"pkgName\":\"com.imasdev.hanoi\",\"events\":[\"IDDOMEVENTS1_MPAGE.ONPAGELOADED_MPAGE\",\"GLOBALEVENTS_MPAGE.MASTERSTART_MPAGE\",\"GLOBALEVENTS_MPAGE.LOADHEADER_MPAGE\"],\"grids\":{}}"
+				},
+				"url": {
+					"raw": "https://www.tiendainglesa.com.uy/supermercado/categoria/congelados/frutas-verduras-congeladas/busqueda?gxfullajaxEvt,0,0,*%3A*,181,184,0,statprice+asc,,false,,,,0,gx-no-cache=1759754290486",
+					"protocol": "https",
+					"host": [
+						"www",
+						"tiendainglesa",
+						"com",
+						"uy"
+					],
+					"path": [
+						"supermercado",
+						"categoria",
+						"congelados",
+						"frutas-verduras-congeladas",
+						"busqueda"
+					],
+					"query": [
+						{
+							"key": "gxfullajaxEvt,0,0,*%3A*,181,184,0,statprice+asc,,false,,,,0,gx-no-cache",
+							"value": "1759754290486"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.tiendainglesa.com.uy/supermercado/ensalada-monterrey-buffet-500-gr.producto?gxfullajaxEvt,6141,gx-no-cache=1759754296812",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 800ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response is JSON\", function () {\r",
+							"    pm.response.to.be.json;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "host",
+						"value": "www.tiendainglesa.com.uy"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GxAjaxRequest",
+						"value": "1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "X-GXAUTH-TOKEN",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC1leHAiOiIxNzYxMDUwMjk0NzMxIiwiZ3gtcGdtIjoiTVBXMDAxN1dNQVNURVJDT01QT05FTlQifQ.qHObKXuNdB5xOCdDRxDypDNAhzMjjleV_b24jtM0C_4"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"MPage\":false,\"cmpCtx\":\"MPW0017\",\"parms\":[\"wProduct\"],\"hsh\":[],\"objClass\":\"wmastercomponent\",\"pkgName\":\"com.imasdev.hanoi\",\"events\":[\"GLOBALEVENTS.LOADHEADER\"],\"grids\":{}}"
+				},
+				"url": {
+					"raw": "https://www.tiendainglesa.com.uy/supermercado/ensalada-monterrey-buffet-500-gr.producto?gxfullajaxEvt,6141,gx-no-cache=1759754296812",
+					"protocol": "https",
+					"host": [
+						"www",
+						"tiendainglesa",
+						"com",
+						"uy"
+					],
+					"path": [
+						"supermercado",
+						"ensalada-monterrey-buffet-500-gr.producto"
+					],
+					"query": [
+						{
+							"key": "gxfullajaxEvt,6141,gx-no-cache",
+							"value": "1759754296812"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.tiendainglesa.com.uy/supermercado/ensalada-monterrey-buffet-500-gr.producto?gxfullajaxEvt,6141,gx-no-cache=1759754296574",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "DNT",
+						"value": "1"
+					},
+					{
+						"key": "host",
+						"value": "www.tiendainglesa.com.uy"
+					},
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"141\", \"Not?A_Brand\";v=\"8\", \"Chromium\";v=\"141\""
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "GxAjaxRequest",
+						"value": "1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "X-GXAUTH-TOKEN",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC1leHAiOiIxNzYxMDUwMjk1OTAwIiwiZ3gtcGdtIjoiV01BU1RFUiJ9.WFwo-BiSDwX0MPGaPPzn1Wy7_yKwNY1wXPdWfb4zWzc"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"MPage\":true,\"cmpCtx\":\"\",\"parms\":[1,{\"ChannelId\":1,\"CustomerId\":0},{},{\"StoreId\":0,\"SelectedLabel\":\"\",\"SelectedIcon_BannerId\":0,\"Popup_BannerId\":0,\"Title\":\"\"},\"wProduct\",{\"CustomerMail\":\"\",\"CustomerId\":0,\"StoreId\":0,\"EventId\":0,\"EventDesc\":\"\",\"EventType\":\"\",\"PageName\":\"\",\"HasFBDataFlag\":false,\"SessionId\":\"\"},{\"LogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_a27f2365-4a23-418d-8c23-80b1ecff1884.png\",\"LogoGrayUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_2004e672-ae18-4030-bb6d-9026f71d77e8.png\",\"CartLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_891867af-b45f-4080-a9cd-4debc0d9de13.png\",\"AndroidThemeName\":\"TiendaAndroid\",\"iOSThemeName\":\"TiendaiOS7\",\"WebThemeName\":\"TiendaInglesaWeb\",\"AddressesDeliveryTitle\":\"Envío a Domicilio\",\"AddressesPickupTitle\":\"Retiro\",\"BlockCreateAddressFlag\":false,\"AllowDeliveryFlag\":true,\"AllowPickupFlag\":true,\"AllowAgencyFlag\":true,\"MailingAddress\":\"\",\"EnableShoppingListFlag\":true,\"DefaultToPickupFlag\":true,\"Notify_Middlware\":\"PRO\",\"mw_ChannelName\":\"Supermercado\",\"mw_ChannelPrefix\":\"EC\",\"mw_CanCodigoCanal\":3,\"iLeap_UpdatePayment\":true,\"IsExternalFlag\":false,\"ExternalUrl\":\"\",\"CheckoutDeliveryTitle\":\"\",\"CheckoutPickupTitle\":\"\",\"ChannelSelectorLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner9784_c3c87ffe-eddc-4b3d-8da4-ae4436c5e365.png?20240801170641\",\"SocialMedia\":[{\"SocialMediaShareOn\":\"Facebook\",\"SocialMediaName\":\"FACEBOOK\",\"SocialMediaIcon\":\"/static/Resources/facebook.png\",\"SocialMediaLink\":\"http://www.facebook.com/tiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":true},{\"SocialMediaShareOn\":\"Twitter\",\"SocialMediaName\":\"TWITTER\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner7059_683ca2ac-b1c6-427e-8880-1140107a7054.png\",\"SocialMediaLink\":\"http://twitter.com/TiendaInglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":true},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"YOUTUBE\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6874_16edeb4a-4a2e-4095-9413-b0f5de2987e7.png\",\"SocialMediaLink\":\"https://youtube.com/@canaltiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"NEWSLETTER\",\"SocialMediaIcon\":\"\",\"SocialMediaLink\":\"Tienda Inglesa\",\"SocialMediaActiveOnFooter\":false,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"Instagram\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6873_aa5558d0-1e63-4ae3-b868-eba8a5ddf196.png\",\"SocialMediaLink\":\"https://instagram.com/tiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"\",\"SocialMediaName\":\"Threads\",\"SocialMediaIcon\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner7106_8b5eff3f-6096-4680-aa70-bef526798f30.png\",\"SocialMediaLink\":\"https://www.threads.net/@tiendainglesa\",\"SocialMediaActiveOnFooter\":true,\"SocialMediaActiveOnProduct\":false},{\"SocialMediaShareOn\":\"WhatsApp\",\"SocialMediaName\":\"WhatsApp\",\"SocialMediaIcon\":\"/static/Resources/Whatsapp.png\",\"SocialMediaLink\":\"http://#\",\"SocialMediaActiveOnFooter\":false,\"SocialMediaActiveOnProduct\":true}],\"SiteComponents\":{\"ShowFooterTopFlag\":true,\"ShowFooterStoreFlag\":true,\"ShowCartRightFlag\":false,\"ShowContactStoreFlag\":true,\"ShowCartTotalFlag\":true,\"ShowStoreAndAddressFlag\":true,\"ShowSubscribeToNewsFlag\":true,\"SearchInviteMessage\":\"Buscar en Tienda Inglesa\",\"ShowMessageToPicker\":true,\"ShowCartReplacements\":true,\"ShowBackToSchool\":true},\"Fidelity\":{\"ShowPointsAsMainPriceFlag\":false,\"ShowSecondaryPriceFlag\":false,\"ShowStickersFlag\":true,\"ShowPointsPriceFlag\":true,\"ShowFidelityPopUp\":true},\"CheckOut\":{\"RequiredPointsPercentage\":0,\"EditPointAmountEnabledFlag\":true,\"DateSelectorNotEnabledFlag\":false,\"OrderAdditionsType\":3,\"AllowASAPDelivery\":false,\"QuickCheckoutEnabledFlag\":false,\"MaxCartProducts\":0},\"Copyright\":{\"Owner\":\"Henderson & Cía. S.A. RUT 210094030014\",\"Description\":\"Todos los derechos reservados. La información de productos y precios es propiedad de Henderson & Cía. S.A., y es provista para uso estrictamente personal. Prohibido recolectar, reproducir y comercializar.\"},\"Products\":{\"ShowSelectorInitAmount\":false,\"ShowProductCode\":true,\"ProductCodeInfo\":\"Código interno, recuerde el mismo si desea hacer una consulta personalmente o al 0800 3030\"},\"Integration\":{\"Promotions\":{\"ExternalEngineMode\":\"OFF\"}},\"RangeFilters\":{\"RangeUnit\":\"\",\"Ranges\":[]},\"Logos\":{\"vectorLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_7f796fb7-555c-4431-b8d2-9b59bb063872.png\",\"vectorIsotypeUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_bfe23c4b-1ad2-48ad-b461-b4d7edded819.png\",\"largePngLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_e6a3b687-5bc0-491c-93a5-b7e99b8c62d2.png\",\"SmallPngLogoUrl\":\"https://prod-resize.tiendainglesa.com.uy/images/banners/Banner6895_6e07e464-444f-4f9b-a4ca-e8cb5c15522d.png\"}}],\"hsh\":[{\"hsh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC12YWwiOiIxIiwiZ3gtZXhwIjoiMTc2MTA1MDI5NTkwMCIsImd4LXBnbSI6Imd4bXBhZ2VfV01BU1RFUiJ9.cZVpaN-BHrrhj-WidIb2PVWqKqD5JjtDXd9WIX7PXoA\",\"row\":\"\"},{\"hsh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC12YWwiOiJ3UHJvZHVjdCIsImd4LWV4cCI6IjE3NjEwNTAyOTU5MDAiLCJneC1wZ20iOiJneG1wYWdlX1dNQVNURVIifQ.0efsMGKtQP7tgzxe0q-jHElNDfWPvW1LHATYMi_2E1k\",\"row\":\"\"},{\"hsh\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJneC12YWwiOiJ7XCJMb2dvVXJsXCI6XCJodHRwczovL3Byb2QtcmVzaXplLnRpZW5kYWluZ2xlc2EuY29tLnV5L2ltYWdlcy9iYW5uZXJzL0Jhbm5lcjY4OTVfYTI3ZjIzNjUtNGEyMy00MThkLThjMjMtODBiMWVjZmYxODg0LnBuZ1wiLFwiTG9nb0dyYXlVcmxcIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyNjg5NV8yMDA0ZTY3Mi1hZTE4LTQwMzAtYmI2ZC05MDI2ZjcxZDc3ZTgucG5nXCIsXCJDYXJ0TG9nb1VybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1Xzg5MTg2N2FmLWI0NWYtNDA4MC1hOWNkLTRkZWJjMGQ5ZGUxMy5wbmdcIixcIkFuZHJvaWRUaGVtZU5hbWVcIjpcIlRpZW5kYUFuZHJvaWRcIixcImlPU1RoZW1lTmFtZVwiOlwiVGllbmRhaU9TN1wiLFwiV2ViVGhlbWVOYW1lXCI6XCJUaWVuZGFJbmdsZXNhV2ViXCIsXCJBZGRyZXNzZXNEZWxpdmVyeVRpdGxlXCI6XCJFbnbDrW8gYSBEb21pY2lsaW9cIixcIkFkZHJlc3Nlc1BpY2t1cFRpdGxlXCI6XCJSZXRpcm9cIixcIkJsb2NrQ3JlYXRlQWRkcmVzc0ZsYWdcIjpmYWxzZSxcIkFsbG93RGVsaXZlcnlGbGFnXCI6dHJ1ZSxcIkFsbG93UGlja3VwRmxhZ1wiOnRydWUsXCJBbGxvd0FnZW5jeUZsYWdcIjp0cnVlLFwiTWFpbGluZ0FkZHJlc3NcIjpcIlwiLFwiRW5hYmxlU2hvcHBpbmdMaXN0RmxhZ1wiOnRydWUsXCJEZWZhdWx0VG9QaWNrdXBGbGFnXCI6dHJ1ZSxcIk5vdGlmeV9NaWRkbHdhcmVcIjpcIlBST1wiLFwibXdfQ2hhbm5lbE5hbWVcIjpcIlN1cGVybWVyY2Fkb1wiLFwibXdfQ2hhbm5lbFByZWZpeFwiOlwiRUNcIixcIm13X0NhbkNvZGlnb0NhbmFsXCI6MyxcImlMZWFwX1VwZGF0ZVBheW1lbnRcIjp0cnVlLFwiSXNFeHRlcm5hbEZsYWdcIjpmYWxzZSxcIkV4dGVybmFsVXJsXCI6XCJcIixcIkNoZWNrb3V0RGVsaXZlcnlUaXRsZVwiOlwiXCIsXCJDaGVja291dFBpY2t1cFRpdGxlXCI6XCJcIixcIkNoYW5uZWxTZWxlY3RvckxvZ29VcmxcIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyOTc4NF9jM2M4N2ZmZS1lZGRjLTRiM2QtOGRhNC1hZTQ0MzZjNWUzNjUucG5nPzIwMjQwODAxMTcwNjQxXCIsXCJTb2NpYWxNZWRpYVwiOlt7XCJTb2NpYWxNZWRpYVNoYXJlT25cIjpcIkZhY2Vib29rXCIsXCJTb2NpYWxNZWRpYU5hbWVcIjpcIkZBQ0VCT09LXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcIi9zdGF0aWMvUmVzb3VyY2VzL2ZhY2Vib29rLnBuZ1wiLFwiU29jaWFsTWVkaWFMaW5rXCI6XCJodHRwOi8vd3d3LmZhY2Vib29rLmNvbS90aWVuZGFpbmdsZXNhXCIsXCJTb2NpYWxNZWRpYUFjdGl2ZU9uRm9vdGVyXCI6dHJ1ZSxcIlNvY2lhbE1lZGlhQWN0aXZlT25Qcm9kdWN0XCI6dHJ1ZX0se1wiU29jaWFsTWVkaWFTaGFyZU9uXCI6XCJUd2l0dGVyXCIsXCJTb2NpYWxNZWRpYU5hbWVcIjpcIlRXSVRURVJcIixcIlNvY2lhbE1lZGlhSWNvblwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI3MDU5XzY4M2NhMmFjLWIxYzYtNDI3ZS04ODgwLTExNDAxMDdhNzA1NC5wbmdcIixcIlNvY2lhbE1lZGlhTGlua1wiOlwiaHR0cDovL3R3aXR0ZXIuY29tL1RpZW5kYUluZ2xlc2FcIixcIlNvY2lhbE1lZGlhQWN0aXZlT25Gb290ZXJcIjp0cnVlLFwiU29jaWFsTWVkaWFBY3RpdmVPblByb2R1Y3RcIjp0cnVlfSx7XCJTb2NpYWxNZWRpYVNoYXJlT25cIjpcIlwiLFwiU29jaWFsTWVkaWFOYW1lXCI6XCJZT1VUVUJFXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyNjg3NF8xNmVkZWI0YS00YTJlLTQwOTUtOTQxMy1iMGY1ZGUyOTg3ZTcucG5nXCIsXCJTb2NpYWxNZWRpYUxpbmtcIjpcImh0dHBzOi8veW91dHViZS5jb20vQGNhbmFsdGllbmRhaW5nbGVzYVwiLFwiU29jaWFsTWVkaWFBY3RpdmVPbkZvb3RlclwiOnRydWUsXCJTb2NpYWxNZWRpYUFjdGl2ZU9uUHJvZHVjdFwiOmZhbHNlfSx7XCJTb2NpYWxNZWRpYVNoYXJlT25cIjpcIlwiLFwiU29jaWFsTWVkaWFOYW1lXCI6XCJORVdTTEVUVEVSXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcIlwiLFwiU29jaWFsTWVkaWFMaW5rXCI6XCJUaWVuZGEgSW5nbGVzYVwiLFwiU29jaWFsTWVkaWFBY3RpdmVPbkZvb3RlclwiOmZhbHNlLFwiU29jaWFsTWVkaWFBY3RpdmVPblByb2R1Y3RcIjpmYWxzZX0se1wiU29jaWFsTWVkaWFTaGFyZU9uXCI6XCJcIixcIlNvY2lhbE1lZGlhTmFtZVwiOlwiSW5zdGFncmFtXCIsXCJTb2NpYWxNZWRpYUljb25cIjpcImh0dHBzOi8vcHJvZC1yZXNpemUudGllbmRhaW5nbGVzYS5jb20udXkvaW1hZ2VzL2Jhbm5lcnMvQmFubmVyNjg3M19hYTU1NThkMC0xZTYzLTRhZTMtYjg2OC1lYmE4YTVkZGYxOTYucG5nXCIsXCJTb2NpYWxNZWRpYUxpbmtcIjpcImh0dHBzOi8vaW5zdGFncmFtLmNvbS90aWVuZGFpbmdsZXNhXCIsXCJTb2NpYWxNZWRpYUFjdGl2ZU9uRm9vdGVyXCI6dHJ1ZSxcIlNvY2lhbE1lZGlhQWN0aXZlT25Qcm9kdWN0XCI6ZmFsc2V9LHtcIlNvY2lhbE1lZGlhU2hhcmVPblwiOlwiXCIsXCJTb2NpYWxNZWRpYU5hbWVcIjpcIlRocmVhZHNcIixcIlNvY2lhbE1lZGlhSWNvblwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI3MTA2XzhiNWVmZjNmLTYwOTYtNDY4MC1hYTcwLWJlZjUyNjc5OGYzMC5wbmdcIixcIlNvY2lhbE1lZGlhTGlua1wiOlwiaHR0cHM6Ly93d3cudGhyZWFkcy5uZXQvQHRpZW5kYWluZ2xlc2FcIixcIlNvY2lhbE1lZGlhQWN0aXZlT25Gb290ZXJcIjp0cnVlLFwiU29jaWFsTWVkaWFBY3RpdmVPblByb2R1Y3RcIjpmYWxzZX0se1wiU29jaWFsTWVkaWFTaGFyZU9uXCI6XCJXaGF0c0FwcFwiLFwiU29jaWFsTWVkaWFOYW1lXCI6XCJXaGF0c0FwcFwiLFwiU29jaWFsTWVkaWFJY29uXCI6XCIvc3RhdGljL1Jlc291cmNlcy9XaGF0c2FwcC5wbmdcIixcIlNvY2lhbE1lZGlhTGlua1wiOlwiaHR0cDovLyNcIixcIlNvY2lhbE1lZGlhQWN0aXZlT25Gb290ZXJcIjpmYWxzZSxcIlNvY2lhbE1lZGlhQWN0aXZlT25Qcm9kdWN0XCI6dHJ1ZX1dLFwiU2l0ZUNvbXBvbmVudHNcIjp7XCJTaG93Rm9vdGVyVG9wRmxhZ1wiOnRydWUsXCJTaG93Rm9vdGVyU3RvcmVGbGFnXCI6dHJ1ZSxcIlNob3dDYXJ0UmlnaHRGbGFnXCI6ZmFsc2UsXCJTaG93Q29udGFjdFN0b3JlRmxhZ1wiOnRydWUsXCJTaG93Q2FydFRvdGFsRmxhZ1wiOnRydWUsXCJTaG93U3RvcmVBbmRBZGRyZXNzRmxhZ1wiOnRydWUsXCJTaG93U3Vic2NyaWJlVG9OZXdzRmxhZ1wiOnRydWUsXCJTZWFyY2hJbnZpdGVNZXNzYWdlXCI6XCJCdXNjYXIgZW4gVGllbmRhIEluZ2xlc2FcIixcIlNob3dNZXNzYWdlVG9QaWNrZXJcIjp0cnVlLFwiU2hvd0NhcnRSZXBsYWNlbWVudHNcIjp0cnVlLFwiU2hvd0JhY2tUb1NjaG9vbFwiOnRydWV9LFwiRmlkZWxpdHlcIjp7XCJTaG93UG9pbnRzQXNNYWluUHJpY2VGbGFnXCI6ZmFsc2UsXCJTaG93U2Vjb25kYXJ5UHJpY2VGbGFnXCI6ZmFsc2UsXCJTaG93U3RpY2tlcnNGbGFnXCI6dHJ1ZSxcIlNob3dQb2ludHNQcmljZUZsYWdcIjp0cnVlLFwiU2hvd0ZpZGVsaXR5UG9wVXBcIjp0cnVlfSxcIkNoZWNrT3V0XCI6e1wiUmVxdWlyZWRQb2ludHNQZXJjZW50YWdlXCI6MCxcIkVkaXRQb2ludEFtb3VudEVuYWJsZWRGbGFnXCI6dHJ1ZSxcIkRhdGVTZWxlY3Rvck5vdEVuYWJsZWRGbGFnXCI6ZmFsc2UsXCJPcmRlckFkZGl0aW9uc1R5cGVcIjozLFwiQWxsb3dBU0FQRGVsaXZlcnlcIjpmYWxzZSxcIlF1aWNrQ2hlY2tvdXRFbmFibGVkRmxhZ1wiOmZhbHNlLFwiTWF4Q2FydFByb2R1Y3RzXCI6MH0sXCJDb3B5cmlnaHRcIjp7XCJPd25lclwiOlwiSGVuZGVyc29uICYgQ8OtYS4gUy5BLiBSVVQgMjEwMDk0MDMwMDE0XCIsXCJEZXNjcmlwdGlvblwiOlwiVG9kb3MgbG9zIGRlcmVjaG9zIHJlc2VydmFkb3MuIExhIGluZm9ybWFjacOzbiBkZSBwcm9kdWN0b3MgeSBwcmVjaW9zIGVzIHByb3BpZWRhZCBkZSBIZW5kZXJzb24gJiBDw61hLiBTLkEuLCB5IGVzIHByb3Zpc3RhIHBhcmEgdXNvIGVzdHJpY3RhbWVudGUgcGVyc29uYWwuIFByb2hpYmlkbyByZWNvbGVjdGFyLCByZXByb2R1Y2lyIHkgY29tZXJjaWFsaXphci5cIn0sXCJQcm9kdWN0c1wiOntcIlNob3dTZWxlY3RvckluaXRBbW91bnRcIjpmYWxzZSxcIlNob3dQcm9kdWN0Q29kZVwiOnRydWUsXCJQcm9kdWN0Q29kZUluZm9cIjpcIkPDs2RpZ28gaW50ZXJubywgcmVjdWVyZGUgZWwgbWlzbW8gc2kgZGVzZWEgaGFjZXIgdW5hIGNvbnN1bHRhIHBlcnNvbmFsbWVudGUgbyBhbCAwODAwIDMwMzBcIn0sXCJJbnRlZ3JhdGlvblwiOntcIlByb21vdGlvbnNcIjp7XCJFeHRlcm5hbEVuZ2luZU1vZGVcIjpcIk9GRlwifX0sXCJSYW5nZUZpbHRlcnNcIjp7XCJSYW5nZVVuaXRcIjpcIlwiLFwiUmFuZ2VzXCI6W119LFwiTG9nb3NcIjp7XCJ2ZWN0b3JMb2dvVXJsXCI6XCJodHRwczovL3Byb2QtcmVzaXplLnRpZW5kYWluZ2xlc2EuY29tLnV5L2ltYWdlcy9iYW5uZXJzL0Jhbm5lcjY4OTVfN2Y3OTZmYjctNTU1Yy00NDMxLWI4ZDItOWI1OWJiMDYzODcyLnBuZ1wiLFwidmVjdG9ySXNvdHlwZVVybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1X2JmZTIzYzRiLTFhZDItNDhhZC1iNDYxLWI0ZDdlZGRlZDgxOS5wbmdcIixcImxhcmdlUG5nTG9nb1VybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1X2U2YTNiNjg3LTViYzAtNDkxYy05M2E1LWI3ZTk5YjhjNjJkMi5wbmdcIixcIlNtYWxsUG5nTG9nb1VybFwiOlwiaHR0cHM6Ly9wcm9kLXJlc2l6ZS50aWVuZGFpbmdsZXNhLmNvbS51eS9pbWFnZXMvYmFubmVycy9CYW5uZXI2ODk1XzZlMDdlNDY0LTQ0NGYtNGY5Yi1hNGNhLWU4Y2I1YzE1NTIyZC5wbmdcIn19IiwiZ3gtZXhwIjoiMTc2MTA1MDI5NTkwMCIsImd4LXBnbSI6Imd4bXBhZ2VfV01BU1RFUiJ9.CBg_Szols8Ski_Vq501Lea1oVQ02b12dV7K4OFXhxnI\",\"row\":\"\"}],\"objClass\":\"wmaster\",\"pkgName\":\"com.imasdev.hanoi\",\"events\":[\"IDDOMEVENTS1_MPAGE.ONPAGELOADED_MPAGE\",\"GLOBALEVENTS_MPAGE.MASTERSTART_MPAGE\",\"GLOBALEVENTS_MPAGE.LOADHEADER_MPAGE\"],\"grids\":{}}"
+				},
+				"url": {
+					"raw": "https://www.tiendainglesa.com.uy/supermercado/ensalada-monterrey-buffet-500-gr.producto?gxfullajaxEvt,6141,gx-no-cache=1759754296574",
+					"protocol": "https",
+					"host": [
+						"www",
+						"tiendainglesa",
+						"com",
+						"uy"
+					],
+					"path": [
+						"supermercado",
+						"ensalada-monterrey-buffet-500-gr.producto"
+					],
+					"query": [
+						{
+							"key": "gxfullajaxEvt,6141,gx-no-cache",
+							"value": "1759754296574"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
